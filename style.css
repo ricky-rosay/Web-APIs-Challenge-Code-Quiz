@@ -73,7 +73,14 @@
     font-weight: bold;
     padding: 10px 20px;
   }
+  /*adding high scores button styling*/
   
+.highscr-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+/*check to see if button above has the correect styling*/
   .controls {
     display: flex;
     justify-content: center;
