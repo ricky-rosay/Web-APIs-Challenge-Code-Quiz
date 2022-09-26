@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of the quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./style.css" rel="stylesheet">
+  <script defer src="./script.js"></script>
+  <title>Quiz App</title>
 </head>
 <body>
-    <!--this will be the button that starts the quiz-->
-    <div class="start_button"><button>Start Quiz</button></div>
-
-    <!--this will be the info box that appears after clicking the start button-->
-    <div class="info_box">
-        <div class="info_tittle">
-            <span>Want to play a game?</span>
-        </div>
-        <div class="info_list">
-            <div class="info">1. Answer the questions as fast as you can.</div>
-            <div class="info">2. You will have 30 seconds to answer all 5 questions</div>
-            <div class="info">3. Get it right? Move on.</div>
-            <div class="info">4. Get it wrong? Watch your timer because time will be subtracted.</div>
-            <div class="info">5. Can you be the best? Find out. Click start!</div>
-        </div>
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
     </div>
-    
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button>High Scores</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
 </body>
 </html>
 
