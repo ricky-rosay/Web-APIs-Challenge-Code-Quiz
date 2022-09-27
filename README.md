@@ -4,6 +4,8 @@ This will be used to take a timed quiz on JavaScript fundamentals that stores hi
 
 ## Installation
 
+https://ricky-rosay.github.io/Web-APIs-Challenge-Code-Quiz/
+
 ## Usage
 
 ![image of the start of the quiz](./images/start.png)
