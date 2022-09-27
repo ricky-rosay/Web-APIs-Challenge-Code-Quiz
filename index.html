@@ -9,6 +9,7 @@
   <title>Quiz App</title>
 </head>
 <body>
+  <p id="countdown">60</p>
   <div class="container">
     <div id="question-container" class="hide">
       <div id="question">Question</div>
@@ -21,9 +22,9 @@
     </div>
     <div class="controls">
         <!--start button that will appear on the first initial screen-->
-      <button id="start-btn" class="start-btn btn">Start</button>
+      <button onclick="setTimeout(myTimer, 60000);" id="start-btn" class="start-btn btn">Start</button>
       <!--adding high score button below-->
-      <button id="highscore-btn" class="highscr-btn btn">High Scores</button>
+      <button id="highscore-btn" class="highscr-btn btn hide">High Scores</button>
       <button id="next-btn" class="next-btn btn hide">Next</button>
     </div>
   </div>

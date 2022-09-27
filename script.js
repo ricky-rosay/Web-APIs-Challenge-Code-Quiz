@@ -7,6 +7,12 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 /*high score button should give a list of previous date needs work*/
 const highscoreButton = document.getElementById('highscore-btn')
 
+/*adding timer to quiz. will give alert window after 60 seconds*/
+function myTimer() {
+    alert('GAMEOVER')
+}
+
+
 /*function below will shuffle between the question when the quiz is restarted*/
 let shuffledQuestions, currentQuestionIndex
 
@@ -84,6 +90,20 @@ function startGame() {
     element.classList.remove('wrong')
   }
 
+
+  /*attempting timer*/
+
+  var button = document.getElementById("start-btn");
+  var title = document.getElementById("countdown");
+  var time = 60;
+  var myInterval;
+
+  button.addEventListener("click", function(event){
+    myInterval = setInterval(function(){
+        time --;
+        title.innerHTML = time;
+    }, 1000);
+    });
 /*adding the questions below*/
 const questions = [
     {
@@ -152,30 +172,30 @@ const questions = [
       },
       {
         /*finish the questions below*/
-        question: '',
+        question: 'What is JavaScript used for?',
         answers: [
-          { text: 'center, center', correct: false },
-          { text: 'align, center', correct: true },
-          { text: 'alignment, center', correct: false },
-          { text: 'move, center', correct: false }
+          { text: 'It is used to style the webpage and give it a nicer and smoother feel.', correct: false },
+          { text: 'It is used for enhancing the interaction of a user with the webpage.', correct: true },
+          { text: 'It is used to allow the user to capture data in the back end.', correct: false },
+          { text: 'It is used to make coffee.', correct: false }
         ]
       },
       {
-        question: 'Fill in the blanks to align the paragraph to the center of the page: <p_?_="_?_">Welcome</p>',
+        question: 'What is a JavaScript Framework?',
         answers: [
-          { text: 'center, center', correct: false },
-          { text: 'align, center', correct: true },
-          { text: 'alignment, center', correct: false },
-          { text: 'move, center', correct: false }
+          { text: 'Laravel', correct: false },
+          { text: 'React', correct: true },
+          { text: 'Sass', correct: false },
+          { text: 'Django', correct: false }
         ]
       },
       {
-        question: 'Fill in the blanks to align the paragraph to the center of the page: <p_?_="_?_">Welcome</p>',
+        question: 'What is best for Artificial intelligence?',
         answers: [
-          { text: 'center, center', correct: false },
-          { text: 'align, center', correct: true },
-          { text: 'alignment, center', correct: false },
-          { text: 'move, center', correct: false }
+          { text: 'React', correct: false },
+          { text: 'Python', correct: true },
+          { text: 'CSS', correct: false },
+          { text: 'Aliens', correct: false }
         ]
       }
   ]
